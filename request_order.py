@@ -2,7 +2,7 @@ import configuration
 import data
 import requests
 
-def ceate_new_order(): #Создание заказа
+def ceate_new_order():
     order_track = requests.post(configuration.URL+configuration.CREATE_NEW_ORDER, json=data.order_body)
     return order_track.json()['track']
 
